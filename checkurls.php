@@ -24,15 +24,23 @@ function CheckUrls($file) {
   $null_count = 0;
   $invalid_rows = 0;
   $invalid_urls = 0;
+  $rowcount = 0;
 
-  if (is_file("$file.gz")) {
-    $csv_file = array_map(function($v){return str_getcsv($v, "\t");}, gzfile("$file.gz"));
-    if ($csv_file && is_array($csv_file) && count($csv_file) > 1) {
-      $first = true;
-      foreach ($csv_file as $entry) {
-        if ($first) {
-          $first = false;
+  $gzfile = gzopen("$file.gz", 'r');
+  if ($gzfile) {
+    $count = 0;
+    $first_row = true;
+    while (!gzeof($gzfile)) {
+      $line = gzgets($gzfile);
+      if ($line) {
+        $rowcount++;
+        $count++;
+        if ($count % 1000 == 0)
+          echo str_pad("\rLoading URLs: $count", 120);
+        if ($first_row) {
+          $first_row = false;
         } else {
+          $entry = str_getcsv($line, "\t");
           if (isset($entry[$url_column]) && isset($entry[$country_column])) {
             $original_url = $entry[$url_column];
             if ($original_url != 'NULL') {
@@ -63,22 +71,22 @@ function CheckUrls($file) {
           }
         }
       }
-      if (count($unknown)) {
-        echo "Unknown Countries: ";
-        foreach ($unknown as $country)
-          echo "$country,";
-        echo "\n";
-      }
-      $count = count($csv_file);
-      $url_count = count($urls);
-      echo "\n";
-      echo "Rows in CSV: $count\n";
-      echo "Unique URL/location combinations: $url_count\n";
-      echo "Duplicate URL/location combinations: $duplicate_count\n";
-      echo "NULL URLs: $null_count\n";
-      echo "Invalid URLs: $invalid_urls\n";
-      echo "Invalid CSV Rows: $invalid_rows\n";
     }
+    gzclose($gzfile);
+    if (count($unknown)) {
+      echo "Unknown Countries: ";
+      foreach ($unknown as $country)
+        echo "$country,";
+      echo "\n";
+    }
+    $url_count = count($urls);
+    echo "\n";
+    echo "Rows in CSV: $rowcount\n";
+    echo "Unique URL/location combinations: $url_count\n";
+    echo "Duplicate URL/location combinations: $duplicate_count\n";
+    echo "NULL URLs: $null_count\n";
+    echo "Invalid URLs: $invalid_urls\n";
+    echo "Invalid CSV Rows: $invalid_rows\n";
   }
 }
   
