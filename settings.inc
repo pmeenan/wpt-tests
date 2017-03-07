@@ -2,7 +2,7 @@
 set_time_limit(0);
 include(__DIR__ . '/keys.inc.php');
 
-$date = '2017_02_26';
+$date = '2017_03_05';
 $current_crawl = "webperf_$date";
 $urls_file = "urls_list_$date.csv";
 $country_column = 2;
@@ -59,6 +59,10 @@ $locations = array(
   'CK' => 'Gtech_Australia:Chrome.3G',
   'VU' => 'Gtech_Australia:Chrome.3G',
   'WS' => 'Gtech_Australia:Chrome.3G',
+  'TO' => 'Gtech_Australia:Chrome.3G',
+  'NU' => 'Gtech_Australia:Chrome.3G',
+  'SB' => 'Gtech_Australia:Chrome.3G',
+  'TL' => 'Gtech_Australia:Chrome.3G',
   // Singapore
   'AE' => 'Gtech_Singapore:Chrome.3G',
   'IN' => 'Gtech_Singapore:Chrome.3G',
@@ -82,6 +86,9 @@ $locations = array(
   'MV' => 'Gtech_Singapore:Chrome.3G',
   'RE' => 'Gtech_Singapore:Chrome.3G',
   'NP' => 'Gtech_Singapore:Chrome.3G',
+  'KG' => 'Gtech_Singapore:Chrome.3G',
+  'BT' => 'Gtech_Singapore:Chrome.3G',
+  'TJ' => 'Gtech_Singapore:Chrome.3G',
   // Japan
   'CN' => 'Gtech_Japan:Chrome.3G',
   'HK' => 'Gtech_Japan:Chrome.3G',
@@ -90,6 +97,8 @@ $locations = array(
   'TW' => 'Gtech_Japan:Chrome.3G',
   'VN' => 'Gtech_Japan:Chrome.3G',
   'GU' => 'Gtech_Japan:Chrome.3G',
+  'MN' => 'Gtech_Japan:Chrome.3G',
+  'MP' => 'Gtech_Japan:Chrome.3G',
   // Europe (Ireland)
   'BE' => 'Gtech_Ireland:Chrome.3G',
   'ES' => 'Gtech_Ireland:Chrome.3G',
@@ -164,6 +173,43 @@ $locations = array(
   'AL' => 'Gtech_Ireland:Chrome.3G',
   'TN' => 'Gtech_Ireland:Chrome.3G',
   'TZ' => 'Gtech_Ireland:Chrome.3G',
+  'SN' => 'Gtech_Ireland:Chrome.3G',
+  'RW' => 'Gtech_Ireland:Chrome.3G',
+  'YE' => 'Gtech_Ireland:Chrome.3G',
+  'TD' => 'Gtech_Ireland:Chrome.3G',
+  'UZ' => 'Gtech_Ireland:Chrome.3G',
+  'ZM' => 'Gtech_Ireland:Chrome.3G',
+  'DZ' => 'Gtech_Ireland:Chrome.3G',
+  'MZ' => 'Gtech_Ireland:Chrome.3G',
+  'SH' => 'Gtech_Ireland:Chrome.3G',
+  'GH' => 'Gtech_Ireland:Chrome.3G',
+  'BF' => 'Gtech_Ireland:Chrome.3G',
+  'TG' => 'Gtech_Ireland:Chrome.3G',
+  'CI' => 'Gtech_Ireland:Chrome.3G',
+  'BJ' => 'Gtech_Ireland:Chrome.3G',
+  'MG' => 'Gtech_Ireland:Chrome.3G',
+  'IQ' => 'Gtech_Ireland:Chrome.3G',
+  'DJ' => 'Gtech_Ireland:Chrome.3G',
+  'CD' => 'Gtech_Ireland:Chrome.3G',
+  'MR' => 'Gtech_Ireland:Chrome.3G',
+  'GM' => 'Gtech_Ireland:Chrome.3G',
+  'ET' => 'Gtech_Ireland:Chrome.3G',
+  'YT' => 'Gtech_Ireland:Chrome.3G',
+  'VA' => 'Gtech_Ireland:Chrome.3G',
+  'SZ' => 'Gtech_Ireland:Chrome.3G',
+  'LY' => 'Gtech_Ireland:Chrome.3G',
+  'LR' => 'Gtech_Ireland:Chrome.3G',
+  'ST' => 'Gtech_Ireland:Chrome.3G',
+  'KM' => 'Gtech_Ireland:Chrome.3G',
+  'TM' => 'Gtech_Ireland:Chrome.3G',
+  'SL' => 'Gtech_Ireland:Chrome.3G',
+  'ML' => 'Gtech_Ireland:Chrome.3G',
+  'SO' => 'Gtech_Ireland:Chrome.3G',
+  'GN' => 'Gtech_Ireland:Chrome.3G',
+  'CG' => 'Gtech_Ireland:Chrome.3G',
+  'CV' => 'Gtech_Ireland:Chrome.3G',
+  'MW' => 'Gtech_Ireland:Chrome.3G',
+  'GQ' => 'Gtech_Ireland:Chrome.3G',
   // LATAM
   'AR' => 'Gtech_Brazil:Chrome.3G',
   'BR' => 'Gtech_Brazil:Chrome.3G',
@@ -197,6 +243,9 @@ $locations = array(
   'AW' => 'Gtech_Brazil:Chrome.3G',
   'AI' => 'Gtech_Brazil:Chrome.3G',
   'DM' => 'Gtech_Brazil:Chrome.3G',
+  'GY' => 'Gtech_Brazil:Chrome.3G',
+  'GF' => 'Gtech_Brazil:Chrome.3G',
+  'GD' => 'Gtech_Brazil:Chrome.3G',
   // Americas
   'CA' => 'Gtech_US:Chrome.3G',
   'US' => 'Gtech_US:Chrome.3G',
@@ -211,7 +260,11 @@ $locations = array(
   'BS' => 'Gtech_US:Chrome.3G',
   'PF' => 'Gtech_US:Chrome.3G',
   'PR' => 'Gtech_US:Chrome.3G',
-  'UN' => 'Gtech_US:Chrome.3G'
+  'UN' => 'Gtech_US:Chrome.3G',
+  'HT' => 'Gtech_US:Chrome.3G',
+  'AQ' => 'Gtech_US:Chrome.3G',
+  'PM' => 'Gtech_US:Chrome.3G',
+  'FJ' => 'Gtech_US:Chrome.3G'
 );
 
 ?>
