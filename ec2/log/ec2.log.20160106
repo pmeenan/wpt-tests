@@ -1,0 +1,2 @@
+19:50:22 - Launching m3.medium ami ami-561cb13e in us-east-1 for ec2-us-east-1 with user data: wpt_server=www.webpagetest.org wpt_loc=ec2-us-east-1
+19:50:24 - Instance i-ed31586c started: m3.medium ami ami-561cb13e in us-east-1 for ec2-us-east-1 with user data: wpt_server=www.webpagetest.org wpt_loc=ec2-us-east-1
